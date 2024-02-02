@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using ooad_homework.Common;
 
 namespace ooad_homework.Models
