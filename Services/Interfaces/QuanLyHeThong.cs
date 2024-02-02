@@ -1,6 +1,6 @@
 namespace ooad_homework.Services.Interfaces
 {
-    public interface QuanLyHeThong
+    public interface IQuanLyHeThong
     {
         void DangNhap();
         void DangXuat();

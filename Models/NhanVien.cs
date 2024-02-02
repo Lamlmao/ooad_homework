@@ -11,4 +11,14 @@ public class NhanVien : EntityBase<int>
     public DateTime? NKTNV { get; set; }
 
     public string CV { get; set; }
+
+    public int MaNguoiDung { get; set;}
+
+    public NguoiDung NguoiDung { get; set;}
+
+    public List<PhieuPT> PhieuPTs { get; set;}
+
+    public List<PhieuTheoDoiSK> PhieuTheoDoiSKs { get; set;}
+
+
 }

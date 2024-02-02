@@ -10,5 +10,14 @@ public class BacSi : EntityBase<int>
 
     public string CVBS { get; set; }
 
-    public string KhoaBS { get; set; }
+    public string KhoaBS { get; set; } 
+
+    public int MaNguoiDung { get; set;}
+
+    public NguoiDung NguoiDung { get; set;}
+
+    public CuocPT CuocPT { get; set;}
+    public int MaCuocPT { get; set;}
+
+    public List<BenhAn> BenhAns { get; set;}
 }

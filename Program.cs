@@ -1,10 +1,13 @@
+using Microsoft.EntityFrameworkCore;
 using ooad.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<BenhVienDbContext>();
+builder.Services.AddDbContext<BenhVienDbContext>(
+    p => p.UseSqlServer("Data Source=localhost;Initial Catalog=benhviendb;User ID=sa;Password=Password123;TrustServerCertificate=True")
+);
 
 var app = builder.Build();
 

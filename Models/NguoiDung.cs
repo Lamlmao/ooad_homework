@@ -17,4 +17,10 @@ public class NguoiDung : EntityBase<int>
     public string CCCD { get; set; }
 
     public string DiaChi { get; set; }
+
+    public NhanVien NhanVien { get; set;}
+
+    public BenhNhan BenhNhan { get; set;}
+
+    public BacSi BacSi {get ; set;}
 }

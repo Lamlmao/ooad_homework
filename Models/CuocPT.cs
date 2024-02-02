@@ -4,7 +4,6 @@ using ooad_homework.Common;
 namespace ooad_homework.Models;
 public class CuocPT : EntityBase<int> 
 {
-    [Key]
     public int MaPT { get; set; }
 
     public string? MaPhPT { get; set; }
@@ -13,5 +12,11 @@ public class CuocPT : EntityBase<int>
 
     public DateTime? NPT { get; set; }
 
-    public TimeOnly? GPT { get; set; }
+    public DateTime? GPT { get; set; }
+
+    public List<PhieuTheoDoiSK> PhieuTheoDoiSKs { get; set;} 
+
+    public List<PhieuPT> PhieuPTs { get; set;}
+    public List<BacSi> BacSis { get; set;}
+
 }

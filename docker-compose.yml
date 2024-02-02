@@ -1,0 +1,17 @@
+version: '2.2'
+
+volumes:
+  server_data:
+    name: server_data
+
+services:
+  bookwormdb:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: hoteldb
+    environment:
+      SA_PASSWORD: "Password123"  
+      ACCEPT_EULA: "Y"
+    volumes:
+      - server_data:/var/lib/sqlserver/data
+    ports:
+      - "1433:1433"

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using ooad.Models;
+using ooad_homework.Models;
 using ooad_homework.Common.Repositories;
 using ooad_homework.Repositories.Interfaces;
 
