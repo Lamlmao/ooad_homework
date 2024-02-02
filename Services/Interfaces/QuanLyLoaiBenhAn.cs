@@ -1,10 +1,12 @@
+using ooad_homework.DTOs;
+
 namespace ooad_homework.Services.Interfaces
 {
     public interface IQuanLyLoaiBenhAn
     {
-        void ThemMoiLoaiBenhAn();
-        void SuaThongTinLoaiBenhAn();
-        void XoaLoaiBenhAn();
-        void TimKiemLoaiBenhAn();
+        void ThemMoiLoaiBenhAn(ThemMoiLoaiBenhAnDTO themMoiLoaiBenhAnDTO);
+        void SuaThongTinLoaiBenhAn(SuaThongTinBenhAnDTO suaThongTinBenhAnDTO);
+        void XoaLoaiBenhAn(XoaLoaiBenhAnDTO xoaLoaiBenhAnDTO);
+        void TimKiemLoaiBenhAn(TimKiemLoaiBenhAnDTO timKiemLoaiBenhAnDTO);
     }
 }

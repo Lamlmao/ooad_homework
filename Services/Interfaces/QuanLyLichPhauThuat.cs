@@ -1,10 +1,12 @@
+using ooad_homework.DTOs;
+
 namespace ooad_homework.Services.Interfaces
 {
     public interface IQuanLyLichPhauThuat
     {
-        void LapPhieuHen();
-        void CapNhatPhieuHen();
-        void XoaPhieuHen();
-        void TimKiemPhieuHen();
+        void LapPhieuHenPhauThuat(LapPhieuHenPhauThuatDTO lapPhieuHenPhauThuatDTO);
+        void CapNhatPhieuHenPhauThuat(CapNhatPhieuHenPhauThuatDTO capNhatPhieuHenPhauThuatDTO);
+        void XoaPhieuHen(XoaPhieuHenDTO xoaPhieuHenDTO);
+        void TimKiemPhieuHen(TimKiemPhieuHenDTO timKiemPhieuHenDTO);
     }
 }
