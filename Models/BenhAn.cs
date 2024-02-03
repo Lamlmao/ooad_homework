@@ -6,6 +6,8 @@ public class BenhAn : EntityBase<int>
 {
     public int MaBA { get; set; }
 
+    public int MaBenhNhan { get; set; }
+    public int MaBacSi { get; set; }
     public double? TTLS { get; set; }
 
     public string? TTCLS { get; set; }
@@ -14,13 +16,11 @@ public class BenhAn : EntityBase<int>
 
     public string? TDSK { get; set; }
 
-    public int MaLoaiBenhAn { get; set; }
     public LoaiBenhAn LoaiBenhAn { get; set; }
 
-    public int MaBenhNhan { get; set; }
     public BenhNhan BenhNhan { get; set; }
-    public int MaBacSi { get; set; }
 
+    public int MaLoaiBenhAn { get; set; }
     public BacSi BacSi { get; set; }
 
     public List<PhieuTheoDoiSK> PhieuTheoDoiSKs { get; set; }

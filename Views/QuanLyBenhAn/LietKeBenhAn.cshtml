@@ -1,0 +1,70 @@
+@using ooad_homework.Controllers
+@model List<QuanLyBenhAnController.BenhAnDTO> 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Liet ke phieu phau thuat</h2>
+
+<table>
+
+  <tr>
+    <th>Ma Benh An</th>
+    <th>Ma Benh Nhan</th>
+    <th>Ma Bac Si</th>
+    <th>Thong Tin Lam Sang</th>
+    <th>Thong Tin Can Lam Sang</th>
+    <th>Tinh Trang Sau Phau Thuat</th>
+    <th>Thong Tin Cham Soc Suc Khoe</th>
+  </tr>
+  @{
+    foreach(var item in Model){
+      <tr>
+          <td>@item.MaBA</td>
+          <td>@item.MaBenhNhan</td>
+          <td>@item.MaBacSi</td>
+          <td>@item.TTLS</td>
+          <td>@item.TTCLS</td>
+          <td>@item.TTHPT</td>
+          <td>@item.TDSK</td>
+      </tr>
+    }
+  }
+
+</table>
+<table>
+  <tr>
+    <th>Them moi Phieu Phau Thuat</th>
+    <th>Sua Phieu Phau Thuat</th>
+    <th>Xoa Phieu Phau Thuat</th>
+  </tr>
+  <tr>
+        <td><a asp-action="NhapBenhAn" asp-controller="QuanLyBenhAn">Them Benh An</a></td>
+
+    <td><a asp-action="SuaBenhAn" asp-controller="QuanLyBenhAn">Sua Benh An</a></td>
+
+        <td><a asp-action="XoaBenhAn" asp-controller="QuanLyBenhAn">Xoa Benh An</a></td>
+
+  </tr>
+</table>
+</body>
+</html>

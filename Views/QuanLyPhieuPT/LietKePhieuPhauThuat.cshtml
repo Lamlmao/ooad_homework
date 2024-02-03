@@ -1,0 +1,71 @@
+@using ooad_homework.Controllers
+@model List<QuanLyPhieuPTController.NhapPhieuPTDTO> 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Liet ke phieu phau thuat</h2>
+
+<table>
+
+  <tr>
+    <th>Ma Phieu Phau Thuat</th>
+    <th>Ma Benh Nhan</th>
+    <th>Ma Nhan Vien</th>
+    <th>Ma Cuoc Phau Thuat</th>
+    <th>Ngay lap phieu phau thuat</th>
+    <th>Tong tien</th>
+    <th>Tong tien neu huy</th>
+  </tr>
+  @{
+    foreach(var item in Model){
+      <tr>
+          <td>@item.MaPPT</td>
+          <td>@item.MaBenhNhan</td>
+          <td>@item.MaNhanVien</td>
+          <td>@item.MaCuocPT</td>
+          <td>@item.NgayLP</td>
+          <td>@item.TongTien</td>
+          <td>@item.TongTienH</td>
+      </tr>
+
+    }
+  }
+
+</table>
+<table>
+  <tr>
+    <th>Them moi Phieu Phau Thuat</th>
+    <th>Sua Phieu Phau Thuat</th>
+    <th>Xoa Phieu Phau Thuat</th>
+  </tr>
+  <tr>
+        <td><a asp-action="NhapPhieuPhauThuat" asp-controller="QuanLyPhieuPT">Them Phieu Phau Thuat</a></td>
+
+    <td><a asp-action="SuaPhieuPhauThuat" asp-controller="QuanLyPhieuPT">Sua Phieu Phau Thuat</a></td>
+
+        <td><a asp-action="XoaPhieuPhauThuat" asp-controller="QuanLyPhieuPT">Xoa Phieu Phau Thuat</a></td>
+
+  </tr>
+</table>
+</body>
+</html>

@@ -1,6 +1,6 @@
 namespace ooad_homework.DTOs
 {
-    public class TimKiemLoaiBenhAnDTO
+    public class LietKeLoaiBenhAnDTO
     {
         
     }

@@ -24,6 +24,58 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/hlam/Desktop/ooad_homework/Views/Login/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/PhieuTheoDoiSK/LietKePhieuTheoDoi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhpZXVUaGVvRG9pU0svTGlldEtlUGhpZXVUaGVvRG9pLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/PhieuTheoDoiSK/NhapPhieuTheoDoi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhpZXVUaGVvRG9pU0svTmhhcFBoaWV1VGhlb0RvaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/PhieuTheoDoiSK/SuaPhieuTheoDoi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhpZXVUaGVvRG9pU0svU3VhUGhpZXVUaGVvRG9pLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/PhieuTheoDoiSK/XoaPhieuTheoDoi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhpZXVUaGVvRG9pU0svWG9hUGhpZXVUaGVvRG9pLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/QuanLyBenhAn/LietKeBenhAn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVhbkx5QmVuaEFuL0xpZXRLZUJlbmhBbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/QuanLyBenhAn/NhapBenhAn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVhbkx5QmVuaEFuL05oYXBCZW5oQW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/QuanLyBenhAn/SuaBenhAn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVhbkx5QmVuaEFuL1N1YUJlbmhBbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/QuanLyBenhAn/XoaBenhAn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVhbkx5QmVuaEFuL1hvYUJlbmhBbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/QuanLyPhieuPT/LietKePhieuPhauThuat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVhbkx5UGhpZXVQVC9MaWV0S2VQaGlldVBoYXVUaHVhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/QuanLyPhieuPT/NhapPhieuPhauThuat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVhbkx5UGhpZXVQVC9OaGFwUGhpZXVQaGF1VGh1YXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/QuanLyPhieuPT/SuaPhieuPhauThuat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVhbkx5UGhpZXVQVC9TdWFQaGlldVBoYXVUaHVhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/hlam/Desktop/ooad_homework/Views/QuanLyPhieuPT/XoaPhieuPhauThuat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVhbkx5UGhpZXVQVC9Yb2FQaGlldVBoYXVUaHVhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/hlam/Desktop/ooad_homework/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

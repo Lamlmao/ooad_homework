@@ -7,6 +7,7 @@ namespace ooad_homework.Services.Interfaces
         void ThemMoiLoaiBenhAn(ThemMoiLoaiBenhAnDTO themMoiLoaiBenhAnDTO);
         void SuaThongTinLoaiBenhAn(SuaThongTinBenhAnDTO suaThongTinBenhAnDTO);
         void XoaLoaiBenhAn(XoaLoaiBenhAnDTO xoaLoaiBenhAnDTO);
-        void TimKiemLoaiBenhAn(TimKiemLoaiBenhAnDTO timKiemLoaiBenhAnDTO);
+        void LietKeLoaiBenhAn(LietKeLoaiBenhAnDTO lietKeLoaiBenhAnDTO);
+        
     }
 }

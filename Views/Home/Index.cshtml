@@ -1,8 +1,40 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Quan Ly Benh Vien</h1>
 </div>
+
+
+<table>
+  <tr>
+    <th>Quan Ly Phieu Theo doi suc khoe</th>
+    <th>Quan Ly Phieu Phau Thuat</th>
+    <th>Quan Ly Benh An</th>
+  </tr>
+  <tr>
+        <td><a asp-action="LietKePhieuTheoDoi" asp-controller="PhieuTheoDoiSK">Quan Ly Phieu Theo Doi Suc Khoe</a></td>
+
+    <td><a asp-action="LietKePhieuPhauThuat" asp-controller="QuanLyPhieuPT">Quan Ly Phieu Phau Thuat</a></td>
+
+        <td><a asp-action="LietKeBenhAn" asp-controller="QuanLyBenhAn">Xoa Phieu Theo Doi</a></td>
+
+  </tr>
+</table>

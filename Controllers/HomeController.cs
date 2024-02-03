@@ -15,7 +15,9 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        if(this.HttpContext.Session.GetString("User") != null )
+            return View();
+        return RedirectToAction("index","Login");
     }
 
     public IActionResult Privacy()
