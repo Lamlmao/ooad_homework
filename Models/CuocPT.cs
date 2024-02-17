@@ -14,9 +14,9 @@ public class CuocPT : EntityBase<int>
 
     public DateTime? GPT { get; set; }
 
-    public List<PhieuTheoDoiSK> PhieuTheoDoiSKs { get; set;} 
+    // public List<PhieuTheoDoiSK> PhieuTheoDoiSKs { get; set;} 
 
-    public List<PhieuPT> PhieuPTs { get; set;}
-    public List<BacSi> BacSis { get; set;}
+    // public List<PhieuPT> PhieuPTs { get; set;}
+    // public List<BacSi> BacSis { get; set;}
 
 }

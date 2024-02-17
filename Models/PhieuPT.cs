@@ -18,9 +18,9 @@ public class PhieuPT : EntityBase<int>
 
     public int MaNhanVien { get; set; }
     
-    public BenhNhan BenhNhan { get; set; }
+    // public BenhNhan BenhNhan { get; set; }
 
-    public CuocPT CuocPT { get; set; }
+    // public CuocPT CuocPT { get; set; }
 
-    public NhanVien NhanVien { get; set; }
+    // public NhanVien NhanVien { get; set; }
 }

@@ -7,6 +7,6 @@ namespace ooad_homework.Models
     {
         public string TenLoaiBenhAn  { get; set; }
         public string MoTa { get; set; } 
-        public List<BenhAn> BenhAns { get; set;}
+        // public List<BenhAn> BenhAns { get; set;}
     }
 }

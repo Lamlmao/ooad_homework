@@ -12,8 +12,8 @@ using ooad.Persistence;
 namespace ooad.Migrations
 {
     [DbContext(typeof(BenhVienDbContext))]
-    [Migration("20240201150834_init_db")]
-    partial class init_db
+    [Migration("20240203084633_initdb")]
+    partial class initdb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,11 +55,6 @@ namespace ooad.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MaCuocPT");
-
-                    b.HasIndex("MaNguoiDung")
-                        .IsUnique();
-
                     b.ToTable("BacSis");
                 });
 
@@ -97,12 +92,6 @@ namespace ooad.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MaBacSi");
-
-                    b.HasIndex("MaBenhNhan");
-
-                    b.HasIndex("MaLoaiBenhAn");
-
                     b.ToTable("BenhAns");
                 });
 
@@ -130,9 +119,6 @@ namespace ooad.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("MaNguoiDung")
-                        .IsUnique();
 
                     b.ToTable("BenhNhans");
                 });
@@ -163,27 +149,6 @@ namespace ooad.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CuocPTs");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.LoaiBenhAn", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("MoTa")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TenLoaiBenhAn")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("LoaiBenhAn");
                 });
 
             modelBuilder.Entity("ooad_homework.Models.NguoiDung", b =>
@@ -251,9 +216,6 @@ namespace ooad.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MaNguoiDung")
-                        .IsUnique();
-
                     b.ToTable("NhanViens");
                 });
 
@@ -287,12 +249,6 @@ namespace ooad.Migrations
                         .HasColumnType("real");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("MaBenhNhan");
-
-                    b.HasIndex("MaCuocPT");
-
-                    b.HasIndex("MaNhanVien");
 
                     b.ToTable("PhieuPTs");
                 });
@@ -334,197 +290,7 @@ namespace ooad.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MaBenhAn");
-
-                    b.HasIndex("MaBenhNhan");
-
-                    b.HasIndex("MaCuocPT");
-
-                    b.HasIndex("MaNhanVien");
-
                     b.ToTable("PhieuTheoDoiSKs");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.BacSi", b =>
-                {
-                    b.HasOne("ooad_homework.Models.CuocPT", "CuocPT")
-                        .WithMany("BacSis")
-                        .HasForeignKey("MaCuocPT")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("ooad_homework.Models.NguoiDung", "NguoiDung")
-                        .WithOne("BacSi")
-                        .HasForeignKey("ooad_homework.Models.BacSi", "MaNguoiDung")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("CuocPT");
-
-                    b.Navigation("NguoiDung");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.BenhAn", b =>
-                {
-                    b.HasOne("ooad_homework.Models.BacSi", "BacSi")
-                        .WithMany("BenhAns")
-                        .HasForeignKey("MaBacSi")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("ooad_homework.Models.BenhNhan", "BenhNhan")
-                        .WithMany("BenhAns")
-                        .HasForeignKey("MaBenhNhan")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("ooad_homework.Models.LoaiBenhAn", "LoaiBenhAn")
-                        .WithMany("BenhAns")
-                        .HasForeignKey("MaLoaiBenhAn")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("BacSi");
-
-                    b.Navigation("BenhNhan");
-
-                    b.Navigation("LoaiBenhAn");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.BenhNhan", b =>
-                {
-                    b.HasOne("ooad_homework.Models.NguoiDung", "NguoiDung")
-                        .WithOne("BenhNhan")
-                        .HasForeignKey("ooad_homework.Models.BenhNhan", "MaNguoiDung")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("NguoiDung");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.NhanVien", b =>
-                {
-                    b.HasOne("ooad_homework.Models.NguoiDung", "NguoiDung")
-                        .WithOne("NhanVien")
-                        .HasForeignKey("ooad_homework.Models.NhanVien", "MaNguoiDung")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("NguoiDung");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.PhieuPT", b =>
-                {
-                    b.HasOne("ooad_homework.Models.BenhNhan", "BenhNhan")
-                        .WithMany("PhieuPTs")
-                        .HasForeignKey("MaBenhNhan")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("ooad_homework.Models.CuocPT", "CuocPT")
-                        .WithMany("PhieuPTs")
-                        .HasForeignKey("MaCuocPT")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("ooad_homework.Models.NhanVien", "NhanVien")
-                        .WithMany("PhieuPTs")
-                        .HasForeignKey("MaNhanVien")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("BenhNhan");
-
-                    b.Navigation("CuocPT");
-
-                    b.Navigation("NhanVien");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.PhieuTheoDoiSK", b =>
-                {
-                    b.HasOne("ooad_homework.Models.BenhAn", "BenhAn")
-                        .WithMany("PhieuTheoDoiSKs")
-                        .HasForeignKey("MaBenhAn")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("ooad_homework.Models.BenhNhan", "BenhNhan")
-                        .WithMany("PhieuTheoDoiSKs")
-                        .HasForeignKey("MaBenhNhan")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("ooad_homework.Models.CuocPT", "CuocPT")
-                        .WithMany("PhieuTheoDoiSKs")
-                        .HasForeignKey("MaCuocPT")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("ooad_homework.Models.NhanVien", "NhanVien")
-                        .WithMany("PhieuTheoDoiSKs")
-                        .HasForeignKey("MaNhanVien")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("BenhAn");
-
-                    b.Navigation("BenhNhan");
-
-                    b.Navigation("CuocPT");
-
-                    b.Navigation("NhanVien");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.BacSi", b =>
-                {
-                    b.Navigation("BenhAns");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.BenhAn", b =>
-                {
-                    b.Navigation("PhieuTheoDoiSKs");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.BenhNhan", b =>
-                {
-                    b.Navigation("BenhAns");
-
-                    b.Navigation("PhieuPTs");
-
-                    b.Navigation("PhieuTheoDoiSKs");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.CuocPT", b =>
-                {
-                    b.Navigation("BacSis");
-
-                    b.Navigation("PhieuPTs");
-
-                    b.Navigation("PhieuTheoDoiSKs");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.LoaiBenhAn", b =>
-                {
-                    b.Navigation("BenhAns");
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.NguoiDung", b =>
-                {
-                    b.Navigation("BacSi")
-                        .IsRequired();
-
-                    b.Navigation("BenhNhan")
-                        .IsRequired();
-
-                    b.Navigation("NhanVien")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("ooad_homework.Models.NhanVien", b =>
-                {
-                    b.Navigation("PhieuPTs");
-
-                    b.Navigation("PhieuTheoDoiSKs");
                 });
 #pragma warning restore 612, 618
         }

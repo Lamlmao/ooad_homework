@@ -37,25 +37,25 @@ public class BenhVienDbContext : DbContext {
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<BenhNhan>().HasOne(p => p.NguoiDung).WithOne(p => p.BenhNhan).HasForeignKey<BenhNhan>("MaNguoiDung");
+        // modelBuilder.Entity<BenhNhan>().HasOne(p => p.NguoiDung).WithOne(p => p.BenhNhan).HasForeignKey<BenhNhan>("MaNguoiDung");
         
-        modelBuilder.Entity<NhanVien>().HasOne(p => p.NguoiDung).WithOne(p => p.NhanVien).HasForeignKey<NhanVien>("MaNguoiDung");
+        // modelBuilder.Entity<NhanVien>().HasOne(p => p.NguoiDung).WithOne(p => p.NhanVien).HasForeignKey<NhanVien>("MaNguoiDung");
 
-        modelBuilder.Entity<BacSi>().HasOne(p => p.NguoiDung).WithOne(p => p.BacSi).HasForeignKey<BacSi>("MaNguoiDung").OnDelete(DeleteBehavior.NoAction);
-        modelBuilder.Entity<BacSi>().HasOne(p => p.CuocPT).WithMany(p => p.BacSis).HasForeignKey("MaCuocPT").OnDelete(DeleteBehavior.NoAction);
+        // modelBuilder.Entity<BacSi>().HasOne(p => p.NguoiDung).WithOne(p => p.BacSi).HasForeignKey<BacSi>("MaNguoiDung").OnDelete(DeleteBehavior.NoAction);
+        // modelBuilder.Entity<BacSi>().HasOne(p => p.CuocPT).WithMany(p => p.BacSis).HasForeignKey("MaCuocPT").OnDelete(DeleteBehavior.NoAction);
 
-        modelBuilder.Entity<PhieuPT>().HasOne(p => p.BenhNhan).WithMany(p => p.PhieuPTs).HasForeignKey("MaBenhNhan").OnDelete(DeleteBehavior.NoAction); 
-        modelBuilder.Entity<PhieuPT>().HasOne(p => p.CuocPT).WithMany(p => p.PhieuPTs).HasForeignKey("MaCuocPT").OnDelete(DeleteBehavior.NoAction);
-        modelBuilder.Entity<PhieuPT>().HasOne(p => p.NhanVien).WithMany(p => p.PhieuPTs).HasForeignKey("MaNhanVien").OnDelete(DeleteBehavior.NoAction);
+        // modelBuilder.Entity<PhieuPT>().HasOne(p => p.BenhNhan).WithMany(p => p.PhieuPTs).HasForeignKey("MaBenhNhan").OnDelete(DeleteBehavior.NoAction); 
+        // modelBuilder.Entity<PhieuPT>().HasOne(p => p.CuocPT).WithMany(p => p.PhieuPTs).HasForeignKey("MaCuocPT").OnDelete(DeleteBehavior.NoAction);
+        // modelBuilder.Entity<PhieuPT>().HasOne(p => p.NhanVien).WithMany(p => p.PhieuPTs).HasForeignKey("MaNhanVien").OnDelete(DeleteBehavior.NoAction);
 
-        modelBuilder.Entity<BenhAn>().HasOne(p => p.LoaiBenhAn).WithMany(p => p.BenhAns).HasForeignKey("MaLoaiBenhAn").OnDelete(DeleteBehavior.NoAction);
-        modelBuilder.Entity<BenhAn>().HasOne(p => p.BacSi).WithMany(p => p.BenhAns).HasForeignKey("MaBacSi").OnDelete(DeleteBehavior.NoAction);;
-        modelBuilder.Entity<BenhAn>().HasOne(p => p.BenhNhan).WithMany(p => p.BenhAns).HasForeignKey("MaBenhNhan").OnDelete(DeleteBehavior.NoAction);; 
+        // modelBuilder.Entity<BenhAn>().HasOne(p => p.LoaiBenhAn).WithMany(p => p.BenhAns).HasForeignKey("MaLoaiBenhAn").OnDelete(DeleteBehavior.NoAction);
+        // modelBuilder.Entity<BenhAn>().HasOne(p => p.BacSi).WithMany(p => p.BenhAns).HasForeignKey("MaBacSi").OnDelete(DeleteBehavior.NoAction);;
+        // modelBuilder.Entity<BenhAn>().HasOne(p => p.BenhNhan).WithMany(p => p.BenhAns).HasForeignKey("MaBenhNhan").OnDelete(DeleteBehavior.NoAction);; 
 
-        modelBuilder.Entity<PhieuTheoDoiSK>().HasOne(p => p.CuocPT).WithMany(p => p.PhieuTheoDoiSKs).HasForeignKey("MaCuocPT").OnDelete(DeleteBehavior.NoAction);;
-        modelBuilder.Entity<PhieuTheoDoiSK>().HasOne(p => p.BenhAn).WithMany(p => p.PhieuTheoDoiSKs).HasForeignKey("MaBenhAn").OnDelete(DeleteBehavior.NoAction);;
-        modelBuilder.Entity<PhieuTheoDoiSK>().HasOne(p => p.NhanVien).WithMany(p => p.PhieuTheoDoiSKs).HasForeignKey("MaNhanVien").OnDelete(DeleteBehavior.NoAction);;
-        modelBuilder.Entity<PhieuTheoDoiSK>().HasOne(p => p.BenhNhan).WithMany(p => p.PhieuTheoDoiSKs).HasForeignKey("MaBenhNhan").OnDelete(DeleteBehavior.NoAction);;
+        // modelBuilder.Entity<PhieuTheoDoiSK>().HasOne(p => p.CuocPT).WithMany(p => p.PhieuTheoDoiSKs).HasForeignKey("MaCuocPT").OnDelete(DeleteBehavior.NoAction);;
+        // modelBuilder.Entity<PhieuTheoDoiSK>().HasOne(p => p.BenhAn).WithMany(p => p.PhieuTheoDoiSKs).HasForeignKey("MaBenhAn").OnDelete(DeleteBehavior.NoAction);;
+        // modelBuilder.Entity<PhieuTheoDoiSK>().HasOne(p => p.NhanVien).WithMany(p => p.PhieuTheoDoiSKs).HasForeignKey("MaNhanVien").OnDelete(DeleteBehavior.NoAction);;
+        // modelBuilder.Entity<PhieuTheoDoiSK>().HasOne(p => p.BenhNhan).WithMany(p => p.PhieuTheoDoiSKs).HasForeignKey("MaBenhNhan").OnDelete(DeleteBehavior.NoAction);;
 
         base.OnModelCreating(modelBuilder);
     }

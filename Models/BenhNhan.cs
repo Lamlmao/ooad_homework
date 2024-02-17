@@ -14,12 +14,12 @@ public class BenhNhan : EntityBase<int>
 
     public int MaNguoiDung { get; set;}
 
-    public NguoiDung NguoiDung { get; set;}
+    // public NguoiDung NguoiDung { get; set;}
 
-    public List<PhieuPT> PhieuPTs { get; set;}
+    // public List<PhieuPT> PhieuPTs { get; set;}
 
-    public List<BenhAn> BenhAns { get; set;}
+    // public List<BenhAn> BenhAns { get; set;}
 
-    public List<PhieuTheoDoiSK> PhieuTheoDoiSKs { get; set;}
+    // public List<PhieuTheoDoiSK> PhieuTheoDoiSKs { get; set;}
 
 }

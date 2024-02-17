@@ -16,12 +16,10 @@ public class BenhAn : EntityBase<int>
 
     public string? TDSK { get; set; }
 
-    public LoaiBenhAn LoaiBenhAn { get; set; }
-
-    public BenhNhan BenhNhan { get; set; }
-
     public int MaLoaiBenhAn { get; set; }
-    public BacSi BacSi { get; set; }
+    // public LoaiBenhAn LoaiBenhAn { get; set; }
+    // public BacSi BacSi { get; set; }
+    // public BenhNhan BenhNhan { get; set; }
 
-    public List<PhieuTheoDoiSK> PhieuTheoDoiSKs { get; set; }
+    // public List<PhieuTheoDoiSK> PhieuTheoDoiSKs { get; set; }
 }
